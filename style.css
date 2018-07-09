@@ -1,0 +1,24 @@
+body {
+  background-color: black;
+}
+
+@keyframes steve-in {
+  0% {
+    opacity: 0;
+    transform: scale(8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.steve {
+  position: absolute;
+  animation: steve-in 2000ms linear;
+
+}

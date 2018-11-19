@@ -20,5 +20,7 @@ body {
 .steve {
   position: absolute;
   animation: steve-in 2000ms linear;
+  width: 5vw;
+  height: auto;
 
 }

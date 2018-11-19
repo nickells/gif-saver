@@ -5,9 +5,16 @@ const getRandomPixelPosition = () => {
   }
 }
 
+const demoUrls = [
+  'https://i.imgur.com/frFzz7e.gif',
+  'https://ubisafe.org/images/gif-transparent-1.gif'
+]
+
 const Steve = () => {
   let $steve = document.createElement('img')
-  $steve.src = './steve.gif'
+  const search = window.location.search.split('?urls=')[1]
+  const urls = search ? search.split(',') : demoUrls
+  $steve.src = urls[Math.floor(Math.random() * urls.length)]
   $steve.classList.add('steve')
   const {x, y} = getRandomPixelPosition()
   $steve.style.left = x
